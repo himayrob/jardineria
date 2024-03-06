@@ -1,4 +1,4 @@
-cliente = [
+clientes = [
     {
         "codigo_cliente": 0,
         "nombre_cliente":"",
