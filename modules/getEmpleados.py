@@ -1,11 +1,11 @@
 import storage.empleado as em
 
 
-def getAllNombreApellidoEmailJefe(codigo):
-    nombreApellidoEmail =[]
+def getnombreApellidosEmailDirectorGeneral(codigo):
+    nombreApellidosEmailDirectorGeneral =[]
     for val in em.empleados:
         if (val.get("codigo_jefe") == codigo):
-            nombreApellidoEmail.append(
+            nombreApellidosEmailDirectorGeneral.append(
                 {
                     "nombre": val.get("nombre"),
                     "apellidos": F'{val.get("apellido1")}{val.get("apellido2")}',
@@ -13,4 +13,4 @@ def getAllNombreApellidoEmailJefe(codigo):
                     "jefe": val.get("codigo_jefe")
                 }
             )
-    return nombreApellidoEmail        
+    return nombreApellidosEmailDirectorGeneral
