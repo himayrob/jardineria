@@ -1,3 +1,11 @@
-from modules.getclients import searchname
+from tabulate import tabulate
 
-searchname()
+import module.getClients as clientes
+
+import module.getOficina as oficina
+
+import modules.getEmpleados as empleado
+
+print(tabulate(empleado.getAllNombreApellidosEmailJefe(7), tablefmt ='grid'))
+
+#print(tabulate(cliente.getClientPaisCiudadRegion('spain,fuenlabrada')))
