@@ -1,12 +1,13 @@
 import storage.cliente as cli
 
-def getallClientesSpain(all):
+def getallClientesSpain(Spain):
     allClientesSpain = []
     for val in cli.clientes:
-        if (val.get("puesto") == "spain" ):
+        if (val.get("pais") == "Spain" ):
             allClientesSpain.append(
                 {
-                    "spain": val.get("spain")
+                    "nombre":val.get("nombre_cliente"),
+                    "Spain": val.get("pais")
 
                 }
             )

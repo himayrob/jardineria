@@ -5,5 +5,5 @@ import modules.getOficina as oficina
 import modules.getEmpleados as em
 
 
-print(tabulate(cli .getallClientesSpain(all), tablefmt ='grid'))
+print(tabulate(cli.getallClientesSpain("Spain"), tablefmt ='grid'))
 
