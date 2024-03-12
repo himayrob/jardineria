@@ -7,7 +7,7 @@ import modules.getPedido as pe
 
 if __name__ == "main":
     while True:
-        print("""
+        print(f"""
 
                                                 
    |  /  |_       |  _ _()   ()   | |
@@ -29,13 +29,13 @@ if __name__ == "main":
         if opcion == 1:
             cli.menu()
         elif opcion == 2:
-            oficina.menu()
+            of.menu()
         elif opcion == 3:
             em.menu()
         elif opcion == 4:
             pe.menu()
         elif opcion == 5:
-            pa.menu()
+            pag.menu()
         elif opcion == 6:
             break
 
