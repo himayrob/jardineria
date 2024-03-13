@@ -1,8 +1,11 @@
 
-import storage.producto as pr
-
-
-
+from tabulate import tabulate 
+import json
+import request
+import modules.postProducto as postproduct
+def getAllData():
+    peticion =request.get("")
+    data = peticion.json()
 
 def getAllStocksPriceGama(gama, stock):
     condiciones = []
@@ -56,7 +59,7 @@ def getAllStocksPriceGama(gama, stock):
             pag.menu()
         elif opcion == 6:
             break
-
+            
 
 
  
