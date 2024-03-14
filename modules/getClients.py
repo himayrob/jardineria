@@ -1,148 +1,81 @@
 from tabulate import tabulate
 import storage.cliente as cli
 
-def getAllClienteName():
-    clienteName = []
-    for i,val in enumerate(cli.clientes):
-        clienteName.append({
-            "Codigo_cliente": val.get('codigo_cliente'),
-            "Nombre_cliente": val.get('nombre_cliente')
-         })
+def getAllClientName():
+    clienteName = list()
+    for val in cli.clientes:
+        codigoName = dict({
+            "codigo": val.get('codigo_cliente'),
+            "nombre": val.get('nombre_cliente')
+        })
+        clienteName.append(codigoName)
     return clienteName
 
-def getOneClienteCodigo(codigo):
+def getOneClientCodigo(codigo):
     for val in cli.clientes:
         if(val.get('codigo_cliente') == codigo):
-            return[{
-                "Codigo_cliente": val.get('codigo_cliente'),
-                "Nombre_cliente": val.get('nombre_cliente')
+            return [{
+                "codigo": val.get('codigo_cliente'),
+                "nombre": val.get('nombre_cliente')
             }]
+
 def getAllClientCreditCiudad(limiteCredit, ciudad):
-            clienteCredic = list()
-            for val in cli.clientes: 
-                if(val.get('limite_credito') >= limiteCredit and val.get('ciudad') == ciudad):
-                    clienteCredic.append({
-                         "Codigo": val.get('codigo_cliente'),
-                         "Responsable": val.get('nombre_cliente'),
-                         "Director": f"{val.get('nombre_contacto')} {val.get('apellido_contacto')}",
-                         "Telefono": val.get('telefono'),
-                         "Fax": val.get('fax'),
-                         "Direcciones": f"{val.get('linea_direccion1')} {val.get('linea_direccion2')}",
-                         "Origen": f"{val.get('pais')} {val.get('region')} {val.get('ciudad')} {val.get('codigo_postal')}",
-                         "Codigo del asesor": val.get('codigo_empleado_rep_ventas'),
-                         "Credito": val.get('limite_credito')
-                         })
-            return clienteCredic
-
-def getAllClientPaisRegionCiudad(pais, region=None, ciudad=None):
-     clientZone = list()
-     for val in cli.clientes:
-            if(
-                 val.get('pais') == pais and
-                 (val.get('region') == region or val.get('region') == None) or
-                 (val.get('ciudad') == ciudad or val.get('ciudad') == None)
-             ):
-               clientZone.append({
-                    "Codigo_cliente": val.get('codigo_cliente'),
-                    "Nombre_cliente": val.get('nombre_cliente'),
-                    "Telefono": val.get('telefono'),
-                    "Origen": f"{val.get('pais')} {val.get('region')} {val.get('ciudad')} {val.get('codigo_postal')}"
-               })
-     return clientZone
-
-def getAllClienteCodigoPostal(codigo_postal):
-    clienteCodigoPostal = list()
+    clienteCredic = list()
     for val in cli.clientes:
-        if val.get('codigo_postal') == codigo_postal:
-            clienteCodigoPostal.append({
-                "Codigo_cliente": val.get('codigo_cliente'),
-                "Nombre_cliente": val.get('nombre_cliente'),
+        if(val.get('limite_credito') >= limiteCredit and val.get('ciudad') == ciudad):
+            clienteCredic.append({
+                "Codigo": val.get('codigo_cliente'),
+                "Responsable": val.get('nombre_cliente'),
+                "Director": f"{val.get('nombre_contacto')} {val.get('nombre_contacto')}",
                 "Telefono": val.get('telefono'),
+                "Fax": val.get('fax'),
+                "Direcciones": f"{val.get('linea_direccion1')} {val.get('linea_direccion2')}",
                 "Origen": f"{val.get('pais')} {val.get('region')} {val.get('ciudad')} {val.get('codigo_postal')}",
+                "Codigo del asesor": val.get('codigo_empleado_rep_ventas'),
                 "Credito": val.get('limite_credito')
             })
-    return clienteCodigoPostal 
-
-def getAllClientFax(fax):
-      clienteFax = list()
-      for val in cli.clientes:
-            if val.get('fax') == fax:
-                  clienteFax.append({
-                        "Codigo_cliente": val.get('codigo_cliente'),
-                        "Nombre_cliente": val.get('nombre_cliente'),
-                        "Telefono": val.get('telefono'),
-                        "Origen": f"{val.get('pais')} {val.get('region')} {val.get('ciudad')} {val.get('codigo_postal')}"
-                  })
-                  return clienteFax
-
-def getAllClientTelefono(telefono):
-      clienteTelefono = list()
-      for val in cli.clientes:
-            if val.get('telefono') == telefono:
-                  clienteTelefono.append({
-                        "Codigo_cliente": val.get('codigo_cliente'),
-                        "Nombre_cliente": val.get('nombre_cliente'),
-                        "Telefono": val.get('telefono'),
-                        "Origen": f"{val.get('pais')} {val.get('region')} {val.get('ciudad')} {val.get('codigo_postal')}"
-                  })
-                  return clienteTelefono
-            
-def getAllEspañaClientes():
-    PaisClientes = []
-    for val in cli.clientes:
-        if(val.get("pais") == ("Spain")):
-            PaisClientes.append(
-                {
-                    "nombre_cliente": val.get("nombre_cliente"),
-                    "pais_cliente": val.get("pais")
-                }
-            )
-    return PaisClientes
+    return clienteCredic
 
 def menu():
     while True:
-         print("""
-  ___                  _               _       _             _ _         _          
- | _ \___ _ __ ___ _ _| |_ ___ ___  __| |___  | |___ ___  __| (_)___ _ _| |_ ___ ___
- |   / -_| '_ / _ | '_|  _/ -_(_-< / _` / -_) | / _ (_-< / _| | / -_| ' |  _/ -_(_-<
- |_|_\___| .__\___|_|  \__\___/__/ \__,_\___| |_\___/__/ \__|_|_\___|_||_\__\___/__/
-         |_|                                                                        
+        print(""" 
+    ____                        __                   __        __                   ___            __           
+   / __ \___  ____  ____  _____/ /____  _____   ____/ /__     / /___  _____   _____/ (_)__  ____  / /____  _____
+  / /_/ / _ \/ __ \/ __ \/ ___/ __/ _ \/ ___/  / __  / _ \   / / __ \/ ___/  / ___/ / / _ \/ __ \/ __/ _ \/ ___/
+ / _, _/  __/ /_/ / /_/ / /  / /_/  __(__  )  / /_/ /  __/  / / /_/ (__  )  / /__/ / /  __/ / / / /_/  __(__  ) 
+/_/ |_|\___/ .___/\____/_/   \__/\___/____/   \__,_/\___/  /_/\____/____/   \___/_/_/\___/_/ /_/\__/\___/____/  
+          /_/                                                                                                   
 
+            0. Regresar al menu principal
             1. Obtener todos los clientes (codigo y nombre)
-            2. Obtener un cliente por su codigo (codigo)
-            3. Obtener toda la informacion de un cliente segun su limite de credito y ciudad que pertenece (ejem: 3000.0, San Francisco)
-            4. Obtener la informacion de un cliente con respecto a su pais, region o ciudad (pais, region, ciudad)
-            5. Obtener la informacion de un cliente con respecto a su codigo postal (codigo_postal)
-            6. Obtener la informacion de un cliente con respecto a su Fax (fax)
-            7. Obtener la informacion de un cliente con respecto a su telefono (telefono)
-            8. Obtener todos los clientes de España
-            9. Regresar al Menu Principal
-    """)
-         opcion = int(input("\nIngrese la opcion que desea realizar: "))
-         if opcion == 1:
-              print(tabulate(getAllClienteName(), tablefmt="fancy_grid"))
-         elif opcion == 2:
-              codigo = int(input("Ingrese el codigo del cliente: "))
-              print(tabulate(getOneClienteCodigo(codigo), headers="keys", tablefmt="fancy_grid"))
-         elif opcion == 3:
-              limiteCredit = float(input("Ingrese el limite de credito del cliente: "))
-              ciudad = str(input("Ingrese la ciudad del cliente: "))
-              print(tabulate(getAllClientCreditCiudad(limiteCredit, ciudad), headers="keys", tablefmt="fancy_grid"))
-         elif opcion == 4:
-              pais = str(input("Ingrese el pais del cliente: "))
-              region = str(input("Ingrese la region del cliente: "))
-              ciudad = str(input("Ingrese la ciudad del cliente: "))
-              print(tabulate(getAllClientPaisRegionCiudad(pais, region, ciudad), headers="keys", tablefmt="fancy_grid"))
-         elif opcion == 5:
-              codigo_postal = str(input("Ingrese el codigo postal del cliente: "))
-              print(tabulate(getAllClienteCodigoPostal(codigo_postal), headers="keys", tablefmt="fancy_grid"))
-         elif opcion == 6:
-              fax = str(input("Ingrese el fax del cliente: "))
-              print(tabulate(getAllClientFax(fax), headers="keys", tablefmt="fancy_grid"))
-         elif opcion == 7:
-              telefono = str(input("Ingrese el telefono del cliente: "))
-              print(tabulate(getAllClientTelefono(telefono), headers="keys", tablefmt="fancy_grid"))
-         elif opcion == 8:
-              print(tabulate(getAllEspañaClientes(), headers="keys", tablefmt="fancy_grid"))
-         elif opcion == 9: 
-              break
+            2. Obtener un cliente por el codigo 
+            3. Obtener toda la informacoin de un cliente segun su limite de credito y ciudad que pertenece (ejem: 1500.0, Fuenlabrada )
+          
+          """)        
+        opcion = int(input("\nSelecione una de las opciones: "))
+        if(opcion == 1):
+            print(tabulate(getAllClientName(), headers="keys", tablefmt="github"))
+        elif(opcion == 2):
+            codigoCliente = int(input("Ingrese el codigo del cliente: "))
+            print(tabulate(getOneClientCodigo(codigoCliente), headers="keys", tablefmt="github"))
+        elif(opcion == 3):
+            limite = float(input("Ingrese el limite de credito de los clientes que deseas vizualizar: "))
+            ciudad = input("Ingrese el nombre de la ciudad que deseas filtrar los clientes: ")
+            print(tabulate(getAllClientCreditCiudad(limite, ciudad), headers="keys", tablefmt="github"))
+        elif(opcion == 0):
+            break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
