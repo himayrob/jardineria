@@ -1,4 +1,5 @@
 import os
+import re
 import modules.getClients as cliente
 import modules.getOficina as oficina
 import modules.getEmpleados as empleado
@@ -61,19 +62,46 @@ def menuProducto():
 
                   
 """)
-            opcion = int(input("\nseleccione una de las opciones: "))
-            if(opcion==1):
-               cliente.menu()
-            elif(opcion==2):
-               oficina.menu()
-            elif(opcion==3):
-               empleado.menu()
-            elif(opcion==4):
-               pedidos.menu()
-            elif(opcion==5):
-               menuProducto()
-            elif(opcion == 0):
-                break
+            
+           try:
+              
+              opcion = int(input("\nseleccione una de las opciones: "))
+              if(re.match(r'[0-9]+$', opcion)in not none):
+                  opcion = int(opcion)
+                  if(opcion>=0 and opcion<=5):
+                      
+                     if(opcion==1):
+                        cliente.menu()
+                     elif(opcion==2):
+                        oficina.menu()
+                     elif(opcion==3):
+                        empleado.menu()
+                     elif(opcion==4):
+                        pedidos.menu()
+                     elif(opcion==5):
+                        menuProducto()
+                     elif(opcion == 0):
+                        break
+            
+              
+           except zeroDivision as error:
+              print("error generado: ")   
+           except ValueError as error:
+              print("error generado: ")
+              
+              
+              
+              
+           
+           finally:
+           
+           
+           
+           
+           
+           
+           
+      
 
    
      
