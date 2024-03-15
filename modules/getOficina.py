@@ -2,7 +2,7 @@ import storage.oficina as of
 # Devuelve un listado con el código de 
 # oficina y la ciudad donde hay oficinas.
 
-def getAllCodigoCiudad():
+def getAllCodigoCiudad():#filtro 1
     codigoCiudad = []
     for val in of.oficina:
         codigoCiudad.append({
@@ -14,7 +14,7 @@ def getAllCodigoCiudad():
 # Devuelve un listado con la ciudad y el teléfono 
 # de las oficinas de España.
 
-def getAllCiudadTelefono(pais):
+def getAllCiudadTelefono(pais):#segundo filtro
     ciudadTelefono = []
     for val in of.oficina:
         if(val.get("pais") == pais):

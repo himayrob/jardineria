@@ -1,14 +1,5 @@
 oficina = [
     {
-    "codigo_oficina": "",
-    "ciudad" :"",
-    "pais": "",
-    "region": "",
-    "codigo":"",
-}
-    ]
-oficina = [
-    {
         "codigo_oficina": "BCN-ES",
         "ciudad": "Barcelona",
         "pais": "España",

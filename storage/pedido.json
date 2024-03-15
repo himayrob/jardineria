@@ -1,16 +1,4 @@
-pedido =[
-    {
-        "codigo_pedido":0,
-        "fecha_pedido": "2024/03/01",
-        "fecha_esperada": "2024/03/01",
-        "fecha_entrega": "2024/03/01",
-        "estado":"",
-        "comentario": "",
-        "codigo_cliente" :0
-
-    }
-]
-pedido = [
+[
     {
         "codigo_pedido": 1,
         "fecha_pedido": "2006-01-17",
@@ -33,7 +21,7 @@ pedido = [
         "codigo_pedido": 3,
         "fecha_pedido": "2008-06-20",
         "fecha_esperada": "2008-06-25",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Rechazado",
         "comentario": "Limite de credito superado",
         "codigo_cliente": 5
@@ -42,9 +30,9 @@ pedido = [
         "codigo_pedido": 4,
         "fecha_pedido": "2009-01-20",
         "fecha_esperada": "2009-01-26",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Pendiente",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 5
     },
     {
@@ -69,7 +57,7 @@ pedido = [
         "codigo_pedido": 10,
         "fecha_pedido": "2009-01-15",
         "fecha_esperada": "2009-01-20",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Pendiente",
         "comentario": "El cliente llama para confirmar la fecha - Esperando al proveedor",
         "codigo_cliente": 3
@@ -78,7 +66,7 @@ pedido = [
         "codigo_pedido": 11,
         "fecha_pedido": "2009-01-20",
         "fecha_esperada": "2009-01-27",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Pendiente",
         "comentario": "El cliente requiere que el pedido se le entregue de 16:00h a 22:00h",
         "codigo_cliente": 1
@@ -87,7 +75,7 @@ pedido = [
         "codigo_pedido": 12,
         "fecha_pedido": "2009-01-22",
         "fecha_esperada": "2009-01-27",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Pendiente",
         "comentario": "El cliente requiere que el pedido se le entregue de 9:00h a 13:00h",
         "codigo_cliente": 1
@@ -98,14 +86,14 @@ pedido = [
         "fecha_esperada": "2009-01-14",
         "fecha_entrega": "2009-01-15",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 7
     },
     {
         "codigo_pedido": 14,
         "fecha_pedido": "2009-01-02",
         "fecha_esperada": "2009-01-02",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Rechazado",
         "comentario": "mal pago",
         "codigo_cliente": 7
@@ -116,7 +104,7 @@ pedido = [
         "fecha_esperada": "2009-01-12",
         "fecha_entrega": "2009-01-11",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 7
     },
     {
@@ -125,7 +113,7 @@ pedido = [
         "fecha_esperada": "2009-01-07",
         "fecha_entrega": "2009-01-15",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 7
     },
     {
@@ -143,14 +131,14 @@ pedido = [
         "fecha_esperada": "2009-01-06",
         "fecha_entrega": "2009-01-07",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 9
     },
     {
         "codigo_pedido": 19,
         "fecha_pedido": "2009-01-18",
         "fecha_esperada": "2009-02-12",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Pendiente",
         "comentario": "entregar en murcia",
         "codigo_cliente": 9
@@ -159,9 +147,9 @@ pedido = [
         "codigo_pedido": 20,
         "fecha_pedido": "2009-01-20",
         "fecha_esperada": "2009-02-15",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Pendiente",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 9
     },
     {
@@ -179,14 +167,14 @@ pedido = [
         "fecha_esperada": "2009-01-11",
         "fecha_entrega": "2009-01-13",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 9
     },
     {
         "codigo_pedido": 23,
         "fecha_pedido": "2008-12-30",
         "fecha_esperada": "2009-01-10",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Rechazado",
         "comentario": "El pedido fue anulado por el cliente",
         "codigo_cliente": 5
@@ -197,14 +185,14 @@ pedido = [
         "fecha_esperada": "2008-07-31",
         "fecha_entrega": "2008-07-25",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 14
     },
     {
         "codigo_pedido": 25,
         "fecha_pedido": "2009-02-02",
         "fecha_esperada": "2009-02-08",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Rechazado",
         "comentario": "El cliente carece de saldo en la cuenta asociada",
         "codigo_cliente": 1
@@ -213,7 +201,7 @@ pedido = [
         "codigo_pedido": 26,
         "fecha_pedido": "2009-02-06",
         "fecha_esperada": "2009-02-12",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Rechazado",
         "comentario": "El cliente anula la operacion para adquirir mas producto",
         "codigo_cliente": 3
@@ -222,7 +210,7 @@ pedido = [
         "codigo_pedido": 27,
         "fecha_pedido": "2009-02-07",
         "fecha_esperada": "2009-02-13",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Entregado",
         "comentario": "El pedido aparece como entregado pero no sabemos en que fecha",
         "codigo_cliente": 3
@@ -251,7 +239,7 @@ pedido = [
         "fecha_esperada": "2008-09-03",
         "fecha_entrega": "2008-08-31",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 13
     },
     {
@@ -276,7 +264,7 @@ pedido = [
         "codigo_pedido": 33,
         "fecha_pedido": "2007-05-20",
         "fecha_esperada": "2007-05-28",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Rechazado",
         "comentario": "El pedido fue anulado por el cliente",
         "codigo_cliente": 4
@@ -294,7 +282,7 @@ pedido = [
         "codigo_pedido": 35,
         "fecha_pedido": "2008-03-10",
         "fecha_esperada": "2009-03-20",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Rechazado",
         "comentario": "Limite de credito superado",
         "codigo_cliente": 4
@@ -305,14 +293,14 @@ pedido = [
         "fecha_esperada": "2008-12-15",
         "fecha_entrega": "2008-12-10",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 14
     },
     {
         "codigo_pedido": 37,
         "fecha_pedido": "2008-11-03",
         "fecha_esperada": "2009-11-13",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Pendiente",
         "comentario": "El pedido nunca llego a su destino",
         "codigo_cliente": 4
@@ -323,7 +311,7 @@ pedido = [
         "fecha_esperada": "2009-03-06",
         "fecha_entrega": "2009-03-07",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 19
     },
     {
@@ -332,7 +320,7 @@ pedido = [
         "fecha_esperada": "2009-03-07",
         "fecha_entrega": "2009-03-09",
         "estado": "Pendiente",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 19
     },
     {
@@ -341,7 +329,7 @@ pedido = [
         "fecha_esperada": "2009-03-10",
         "fecha_entrega": "2009-03-13",
         "estado": "Rechazado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 19
     },
     {
@@ -350,7 +338,7 @@ pedido = [
         "fecha_esperada": "2009-03-13",
         "fecha_entrega": "2009-03-13",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 19
     },
     {
@@ -359,7 +347,7 @@ pedido = [
         "fecha_esperada": "2009-03-23",
         "fecha_entrega": "2009-03-27",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 19
     },
     {
@@ -368,7 +356,7 @@ pedido = [
         "fecha_esperada": "2009-03-26",
         "fecha_entrega": "2009-03-28",
         "estado": "Pendiente",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 23
     },
     {
@@ -377,7 +365,7 @@ pedido = [
         "fecha_esperada": "2009-03-27",
         "fecha_entrega": "2009-03-30",
         "estado": "Pendiente",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 23
     },
     {
@@ -386,7 +374,7 @@ pedido = [
         "fecha_esperada": "2009-03-04",
         "fecha_entrega": "2009-03-07",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 23
     },
     {
@@ -395,7 +383,7 @@ pedido = [
         "fecha_esperada": "2009-03-04",
         "fecha_entrega": "2009-03-05",
         "estado": "Rechazado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 23
     },
     {
@@ -404,7 +392,7 @@ pedido = [
         "fecha_esperada": "2009-03-17",
         "fecha_entrega": "2009-03-17",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 23
     },
     {
@@ -429,7 +417,7 @@ pedido = [
         "codigo_pedido": 50,
         "fecha_pedido": "2008-03-17",
         "fecha_esperada": "2008-08-09",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Pendiente",
         "comentario": "Al parecer, el pedido se ha extraviado a la altura de Sotalbo (Ávila)",
         "codigo_cliente": 26
@@ -447,7 +435,7 @@ pedido = [
         "codigo_pedido": 52,
         "fecha_pedido": "2008-12-07",
         "fecha_esperada": "2008-12-21",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Pendiente",
         "comentario": "El transportista ha llamado a Eva María para indicarle que el pedido llegará más tarde de lo esperado.",
         "codigo_cliente": 26
@@ -465,9 +453,9 @@ pedido = [
         "codigo_pedido": 54,
         "fecha_pedido": "2009-01-11",
         "fecha_esperada": "2009-02-11",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Pendiente",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 14
     },
     {
@@ -483,7 +471,7 @@ pedido = [
         "codigo_pedido": 56,
         "fecha_pedido": "2008-12-19",
         "fecha_esperada": "2009-01-20",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Rechazado",
         "comentario": "El cliente a anulado el pedido el dia 2009-01-10",
         "codigo_cliente": 13
@@ -492,9 +480,9 @@ pedido = [
         "codigo_pedido": 57,
         "fecha_pedido": "2009-01-05",
         "fecha_esperada": "2009-02-05",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Pendiente",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 13
     },
     {
@@ -521,14 +509,14 @@ pedido = [
         "fecha_esperada": "2009-02-11",
         "fecha_entrega": "2009-02-15",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
         "codigo_pedido": 61,
         "fecha_pedido": "2009-01-19",
         "fecha_esperada": "2009-02-19",
-        "fecha_entrega": None,
+        "fecha_entrega": null,
         "estado": "Pendiente",
         "comentario": "Al transportista le ha sido imposible la entrega por no estar presente el cliente",
         "codigo_cliente": 26
@@ -539,7 +527,7 @@ pedido = [
         "fecha_esperada": "2009-02-10",
         "fecha_entrega": "2009-02-11",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -548,7 +536,7 @@ pedido = [
         "fecha_esperada": "2009-02-17",
         "fecha_entrega": "2009-02-20",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -557,7 +545,7 @@ pedido = [
         "fecha_esperada": "2009-02-24",
         "fecha_entrega": "2009-02-27",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -566,7 +554,7 @@ pedido = [
         "fecha_esperada": "2009-03-07",
         "fecha_entrega": "2009-03-10",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -575,7 +563,7 @@ pedido = [
         "fecha_esperada": "2009-03-11",
         "fecha_entrega": "2009-03-14",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -584,7 +572,7 @@ pedido = [
         "fecha_esperada": "2009-03-14",
         "fecha_entrega": "2009-03-17",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -593,7 +581,7 @@ pedido = [
         "fecha_esperada": "2009-03-17",
         "fecha_entrega": "2009-03-20",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -602,7 +590,7 @@ pedido = [
         "fecha_esperada": "2009-03-24",
         "fecha_entrega": "2009-03-27",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -611,7 +599,7 @@ pedido = [
         "fecha_esperada": "2009-03-27",
         "fecha_entrega": "2009-03-30",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -620,7 +608,7 @@ pedido = [
         "fecha_esperada": "2009-03-29",
         "fecha_entrega": "2009-03-31",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -629,7 +617,7 @@ pedido = [
         "fecha_esperada": "2009-03-31",
         "fecha_entrega": "2009-04-03",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -638,7 +626,7 @@ pedido = [
         "fecha_esperada": "2009-04-05",
         "fecha_entrega": "2009-04-08",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -647,7 +635,7 @@ pedido = [
         "fecha_esperada": "2009-04-07",
         "fecha_entrega": "2009-04-10",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -656,7 +644,7 @@ pedido = [
         "fecha_esperada": "2009-04-12",
         "fecha_entrega": "2009-04-15",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -665,7 +653,7 @@ pedido = [
         "fecha_esperada": "2009-04-17",
         "fecha_entrega": "2009-04-20",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -674,7 +662,7 @@ pedido = [
         "fecha_esperada": "2009-04-19",
         "fecha_entrega": "2009-04-22",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -683,7 +671,7 @@ pedido = [
         "fecha_esperada": "2009-04-21",
         "fecha_entrega": "2009-04-24",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -692,7 +680,7 @@ pedido = [
         "fecha_esperada": "2009-04-25",
         "fecha_entrega": "2009-04-28",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -701,7 +689,7 @@ pedido = [
         "fecha_esperada": "2009-04-28",
         "fecha_entrega": "2009-05-01",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -710,7 +698,7 @@ pedido = [
         "fecha_esperada": "2009-05-01",
         "fecha_entrega": "2009-05-04",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -719,7 +707,7 @@ pedido = [
         "fecha_esperada": "2009-05-03",
         "fecha_entrega": "2009-05-06",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -728,7 +716,7 @@ pedido = [
         "fecha_esperada": "2009-05-05",
         "fecha_entrega": "2009-05-08",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -737,7 +725,7 @@ pedido = [
         "fecha_esperada": "2009-05-09",
         "fecha_entrega": "2009-05-12",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -746,7 +734,7 @@ pedido = [
         "fecha_esperada": "2009-05-11",
         "fecha_entrega": "2009-05-14",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -755,7 +743,7 @@ pedido = [
         "fecha_esperada": "2009-05-13",
         "fecha_entrega": "2009-05-16",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -764,7 +752,7 @@ pedido = [
         "fecha_esperada": "2009-05-15",
         "fecha_entrega": "2009-05-18",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -773,7 +761,7 @@ pedido = [
         "fecha_esperada": "2009-05-17",
         "fecha_entrega": "2009-05-20",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -782,7 +770,7 @@ pedido = [
         "fecha_esperada": "2009-05-19",
         "fecha_entrega": "2009-05-22",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -791,7 +779,7 @@ pedido = [
         "fecha_esperada": "2009-05-21",
         "fecha_entrega": "2009-05-24",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -800,7 +788,7 @@ pedido = [
         "fecha_esperada": "2009-05-23",
         "fecha_entrega": "2009-05-26",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -809,7 +797,7 @@ pedido = [
         "fecha_esperada": "2009-05-25",
         "fecha_entrega": "2009-05-28",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -818,7 +806,7 @@ pedido = [
         "fecha_esperada": "2009-05-27",
         "fecha_entrega": "2009-05-30",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -827,7 +815,7 @@ pedido = [
         "fecha_esperada": "2009-05-29",
         "fecha_entrega": "2009-06-01",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -836,7 +824,7 @@ pedido = [
         "fecha_esperada": "2009-05-31",
         "fecha_entrega": "2009-06-03",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -845,7 +833,7 @@ pedido = [
         "fecha_esperada": "2009-06-02",
         "fecha_entrega": "2009-06-05",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -854,7 +842,7 @@ pedido = [
         "fecha_esperada": "2009-06-06",
         "fecha_entrega": "2009-06-09",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -863,7 +851,7 @@ pedido = [
         "fecha_esperada": "2009-06-08",
         "fecha_entrega": "2009-06-11",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -872,7 +860,7 @@ pedido = [
         "fecha_esperada": "2009-06-10",
         "fecha_entrega": "2009-06-13",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -881,7 +869,7 @@ pedido = [
         "fecha_esperada": "2009-06-12",
         "fecha_entrega": "2009-06-15",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -890,7 +878,7 @@ pedido = [
         "fecha_esperada": "2009-06-14",
         "fecha_entrega": "2009-06-17",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -899,7 +887,7 @@ pedido = [
         "fecha_esperada": "2009-06-16",
         "fecha_entrega": "2009-06-19",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -908,7 +896,7 @@ pedido = [
         "fecha_esperada": "2009-06-18",
         "fecha_entrega": "2009-06-21",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -917,7 +905,7 @@ pedido = [
         "fecha_esperada": "2009-06-20",
         "fecha_entrega": "2009-06-23",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -926,7 +914,7 @@ pedido = [
         "fecha_esperada": "2009-06-22",
         "fecha_entrega": "2009-06-25",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -935,7 +923,7 @@ pedido = [
         "fecha_esperada": "2009-06-24",
         "fecha_entrega": "2009-06-27",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -944,7 +932,7 @@ pedido = [
         "fecha_esperada": "2009-06-26",
         "fecha_entrega": "2009-06-29",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -953,7 +941,7 @@ pedido = [
         "fecha_esperada": "2009-06-28",
         "fecha_entrega": "2009-07-01",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -962,7 +950,7 @@ pedido = [
         "fecha_esperada": "2009-06-30",
         "fecha_entrega": "2009-07-03",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -971,7 +959,7 @@ pedido = [
         "fecha_esperada": "2009-07-02",
         "fecha_entrega": "2009-07-05",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -980,7 +968,7 @@ pedido = [
         "fecha_esperada": "2009-07-04",
         "fecha_entrega": "2009-07-07",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -989,7 +977,7 @@ pedido = [
         "fecha_esperada": "2009-07-06",
         "fecha_entrega": "2009-07-09",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -998,7 +986,7 @@ pedido = [
         "fecha_esperada": "2009-07-08",
         "fecha_entrega": "2009-07-11",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -1007,7 +995,7 @@ pedido = [
         "fecha_esperada": "2009-07-10",
         "fecha_entrega": "2009-07-13",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -1016,7 +1004,7 @@ pedido = [
         "fecha_esperada": "2009-07-12",
         "fecha_entrega": "2009-07-15",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -1025,7 +1013,7 @@ pedido = [
         "fecha_esperada": "2009-07-14",
         "fecha_entrega": "2009-07-17",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -1034,7 +1022,7 @@ pedido = [
         "fecha_esperada": "2009-07-16",
         "fecha_entrega": "2009-07-19",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -1043,7 +1031,7 @@ pedido = [
         "fecha_esperada": "2009-07-18",
         "fecha_entrega": "2009-07-21",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -1052,7 +1040,7 @@ pedido = [
         "fecha_esperada": "2009-07-20",
         "fecha_entrega": "2009-07-23",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     },
     {
@@ -1061,7 +1049,7 @@ pedido = [
         "fecha_esperada": "2009-07-22",
         "fecha_entrega": "2009-07-25",
         "estado": "Entregado",
-        "comentario": None,
+        "comentario": null,
         "codigo_cliente": 26
     }
 ]

@@ -1,28 +1,31 @@
 from tabulate import tabulate
 import storage.cliente as cli
 
+
 def getAllClientName():
     clienteName = list()
     for val in cli.clientes:
         codigoName = dict({
             "codigo": val.get('codigo_cliente'),
             "nombre": val.get('nombre_cliente')
-            })
-            ClienteName.append(codigoName)
-        return clienteName
-    
+        })
+        clienteName.append(codigoName)
+    return clienteName
+
+
 def getOneClientCodigo(codigo):
-    for val in cli:clientes:
-        if(val.get('codigo_cliente') == codigo):
+    for val in cli.clientes:
+        if (val.get('codigo_cliente') == codigo):
             return [{
                 "codigo": val.get('codigo_cliente'),
                 "nombre": val.get('nombre_cliente')
-            }]    
+            }]
+
 
 def getAllClientCreditCiudad(limiteCredit, ciudad):
     clienteCredic = list()
     for val in cli.clientes:
-        if(val.get('limite_credito') >= limiteCredit and val.get('ciudad') == ciudad):
+        if (val.get('limite_credito') >= limiteCredit and val.get('ciudad') == ciudad):
             clienteCredic.append({
                 "Codigo": val.get('codigo_cliente'),
                 "Responsable": val.get('nombre_cliente'),
@@ -34,7 +37,8 @@ def getAllClientCreditCiudad(limiteCredit, ciudad):
                 "Codigo del asesor": val.get('codigo_empleado_rep_ventas'),
                 "Credito": val.get('limite_credito')
             })
-    return clienteCredic
+#     return clienteCredic
+
 
 def menu():
     while True:
@@ -50,16 +54,17 @@ def menu():
             1. Obtener todos los clientes (codigo y nombre)
             2. Obtener un cliente por el codigo 
             3. Obtener toda la informacoin de un cliente segun su limite de credito y ciudad que pertenece (ejem: 1500.0, Fuenlabrada )
-          """)        
+          """)
+
         opcion = int(input("\nSelecione una de las opciones: "))
-        if(opcion == 1):
+        if (opcion == 1):
             print(tabulate(getAllClientName(), headers="keys", tablefmt="github"))
-        elif(opcion == 2):
+        elif (opcion == 2):
             codigoCliente = int(input("Ingrese el codigo del cliente: "))
-            print(tabulate(getOneClientCodigo(codigoCliente), headers="keys", tablefmt="github"))
-        elif(opcion == 3):
-            limite = float(input("Ingrese el limite de credito de los clientes que deseas vizualizar: "))
-            ciudad = input("Ingrese el nombre de la ciudad que deseas filtrar los clientes: ")
-            print(tabulate(getAllClientCreditCiudad(limite, ciudad), headers="keys", tablefmt="github"))
-        elif(opcion == 0):
+            print(tabulate(getOneClientCodigo(codigoCliente),headers="keys", tablefmt="github"))
+        # elif(opcion == 3):
+        #     limite = float(input("Ingrese el limite de credito de los clientes que deseas vizualizar: "))
+        #     ciudad = input("Ingrese el nombre de la ciudad que deseas filtrar los clientes: ")
+        #     print(tabulate(getAllClientCreditCiudad(limite, ciudad), headers="keys", tablefmt="github"))
+        elif (opcion == 0):
             break
