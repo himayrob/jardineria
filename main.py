@@ -1,7 +1,7 @@
 import os
-import modules.getClients as cli
-import modules.getOficina as of
-import modules.getEmpleados as em
+import modules.getClients as cliente
+import modules.getOficina as oficina
+import modules.getEmpleados as empleado
 import modules.getPedido as pe
 import modules.getProducto as Repproducto
 import modules.postProducto as CRUDproducto

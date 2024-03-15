@@ -14,4 +14,4 @@ def getAllNombreApellidoEmailJefe(codigo):
                     "jefe": val.get("codigo_jefe")
                 }
             )
-    return nombreApellidoEmail
+    return getAllNombreApellidoEmailJefe

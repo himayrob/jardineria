@@ -7,17 +7,17 @@ def getAllClientName():
         codigoName = dict({
             "codigo": val.get('codigo_cliente'),
             "nombre": val.get('nombre_cliente')
-        })
-        clienteName.append(codigoName)
-    return clienteName
-
+            })
+            ClienteName.append(codigoName)
+        return clienteName
+    
 def getOneClientCodigo(codigo):
-    for val in cli.clientes:
+    for val in cli:clientes:
         if(val.get('codigo_cliente') == codigo):
             return [{
                 "codigo": val.get('codigo_cliente'),
                 "nombre": val.get('nombre_cliente')
-            }]
+            }]    
 
 def getAllClientCreditCiudad(limiteCredit, ciudad):
     clienteCredic = list()
@@ -50,7 +50,6 @@ def menu():
             1. Obtener todos los clientes (codigo y nombre)
             2. Obtener un cliente por el codigo 
             3. Obtener toda la informacoin de un cliente segun su limite de credito y ciudad que pertenece (ejem: 1500.0, Fuenlabrada )
-          
           """)        
         opcion = int(input("\nSelecione una de las opciones: "))
         if(opcion == 1):
@@ -64,18 +63,3 @@ def menu():
             print(tabulate(getAllClientCreditCiudad(limite, ciudad), headers="keys", tablefmt="github"))
         elif(opcion == 0):
             break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
