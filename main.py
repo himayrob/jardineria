@@ -8,26 +8,26 @@ import modules.getProducto as Repproducto
 import modules.postProducto as CRUDproducto
 import json
 def menuProducto():
-#      while True:
-#           os.system("clear")
-#           print("""
-#                   1. Reportes de los productos
-#                   2. Guardar, Actualizar y Eliminar productos
-#                   0. Regresar al menu principal            
+     while True:
+          os.system("clear")
+          print("""
+                  1. Reportes de los productos
+                  2. Guardar, Actualizar y Eliminar productos
+                  0. Regresar al menu principal            
 
-#             """)
-#           opcion = int(input("\nseleccione una de las opciones:"))
-#           if(opcion ==1):
-#                 Repproducto.menu()
-#           if(opcion ==2):
-#                CRUDproducto.menu()
-#           elif(opcion ==0):
-#                break
+            """)
+          opcion = int(input("\nseleccione una de las opciones:"))
+          if(opcion ==1):
+                Repproducto.menu()
+          if(opcion ==2):
+               CRUDproducto.menu()
+          elif(opcion ==0):
+               break
 
-     #if(__name__== "__main__"):
-        # https://patorjk.com/software/taag/#p=display&h=2&v=2&f=Slant&t=Menu%20Principal
-    #    while True:
-      #      os.system("clear")
+     if(__name__== "__main__"):
+        https://patorjk.com/software/taag/#p=display&h=2&v=2&f=Slant&t=Menu%20Principal
+       while True:
+           os.system("clear")
 def menu():
             print("""
 
