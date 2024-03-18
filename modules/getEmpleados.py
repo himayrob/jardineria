@@ -1,10 +1,20 @@
-import storage.empleado as em
+#Ya no funciona, por lo que ahora usamos el import request <-----import storage.empleado as em
+from tabulate import tabulate
+import json
+import requests
 # Devuelve un listado con el nombre, apellidos y email 
 # de los empleados cuyo jefe tiene un código de jefe igual a 7.
 
+
+#definimos el servidor de getEmpleados
+def getAllDataDeEmpleados():
+    peticion = requests.get("http://")
+    data = peticion.json()
+    return data
+
 def getAllNombreApellidoEmailJefe(codigo):#filtro 3
     nombreApellidoEmail = []
-    for val in em.empleados:
+    for val in getAllDataDeEmpleados()::
         if(val.get("codigo_jefe") == codigo):
             nombreApellidoEmail.append(
                 {
@@ -18,7 +28,7 @@ def getAllNombreApellidoEmailJefe(codigo):#filtro 3
 
 def getPuestoNameApellidosEmail(Director_General):
     PuestoNameApellidosEmail = []
-    for val in em.empleados:
+    for val in getAllDataDeEmpleados()::
         if(val.get("codigo_Director General") == Director_General):
              PuestoNameApellidosEmail.append(
                 {
@@ -41,7 +51,7 @@ print(getPuestoNameApellidosEmail)
 
 # def getAllNombreApellidoEmailJefe(codigo):
 #     nombreApellidoEmail = []
-#     for val in em.empleados:
+#     for val in getAllDataDeEmpleados()::
 #         if(val.get("codigo_jefe") == codigo):
 #             nombreApellidoEmail.append(
 #                 {
