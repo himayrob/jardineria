@@ -7,7 +7,7 @@ import modules.getPedido as pe
 import modules.getProducto as Repproducto
 import modules.postProducto as CRUDproducto
 import json
-
+import requests
 
    #   while True:
    #        os.system("clear")
