@@ -9,7 +9,34 @@ import modules.postProducto as CRUDproducto
 import json
 import requests
 
-   #   while True:
+def menu():
+      print("""
+
+
+
+         1. Cliente
+         2. Oficina
+         3. Empleado
+         4. Pedidos
+         5. Productos
+         6. PostProductos
+         """)
+
+   opcion = int(input("\nSeleccione una de las opciones: "))
+   if opcion ==1:
+      cliente.menu()
+   elif opcion == 2:
+      oficina.menu()
+   elif opcion ==3:
+      empleado.menu()
+   elif opcion ==4:
+      Pedidos.menu()
+   elif opcion ==5:
+      producto.menu()
+   elif opcion == 6:
+      PostProducto.menu()
+menu()
+#   while True:
    #        os.system("clear")
    #        print("""
    #                1. Reportes de los productos
