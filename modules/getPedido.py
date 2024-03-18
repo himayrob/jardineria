@@ -1,12 +1,19 @@
-import storage.pedido as pe
+import requests
+import os
 from datetime import datetime
+
+def getAllDataDePedido():
+    peticion = requests.get("")
+    data = peticion.json()
+    return data
+
 # Devuelve un listado con el código de pedido, 
 # código de cliente, fecha esperada y 
 # fecha de entrega de los pedidos que no 
 # han sido entregados a tiempo.
 def getAllPedidosEntregadosAtrasadosDeTiempo():
     pedidosEntregado = []
-    for val in pe.pedido:
+    for val in getAllDataDePedido():
         if val.get("estado") == "Entregado" and val.get("fecha_entrega") is None:
             val["fecha_entrega"] = val.get("fecha_esperada")
         if val.get("estado") == "Entregado":

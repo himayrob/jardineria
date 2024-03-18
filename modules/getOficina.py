@@ -1,4 +1,13 @@
-import storage.oficina as of
+import requests
+from tabulate import tabulate
+import os
+
+def getAllDataDeOficina():
+    peticion = requests.get("http://")
+    data = peticion.json()
+    return data
+
+#import storage.oficina as of
 # Devuelve un listado con el código de 
 # oficina y la ciudad donde hay oficinas.
 

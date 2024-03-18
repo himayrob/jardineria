@@ -1,13 +1,13 @@
 from tabulate import tabulate
 import json
-import request
+import requests
 # Esto ya no funciona porque lo cambiamos a json ------------- import storage.cliente as cli
 
 #json-server (lugar donde se almacena lo que deseamos) storage/producto.json -b (-b lo usamos para definir un servidor especifico) 5001 (el servidor deseado)
 
 #servidor de clientes
 def getAllDataDeClientes():
-    peticion = requests.get("http://")
+    peticion = requests.get("http://172.16.103.18:5001")
     #debemos poner el puerto del ip y aparte del puerto en el que deseamos
     data = peticion.json()
     return data
@@ -26,7 +26,7 @@ def getAllClientName():
 
 
 def getOneClientCodigo(codigo):
-    for val in getAllDataDeClientes()::
+    for val in getAllDataDeClientes():
         if (val.get('codigo_cliente') == codigo):
             return [{
                 "codigo": val.get('codigo_cliente'),
@@ -35,8 +35,10 @@ def getOneClientCodigo(codigo):
 
 
 def getAllClientCreditCiudad(limiteCredit, ciudad):
-    clienteCredic = list()
-    for val in getAllDataDeClientes()::
+    clienteCredic = []
+    for val in getAllDataDeClientes():
+        limiteCredit = float(val.get('limite_credito'))
+        ciudad = (val.get('ciudad'))
         if (val.get('limite_credito') >= limiteCredit and val.get('ciudad') == ciudad):
             clienteCredic.append({
                 "Codigo": val.get('codigo_cliente'),
@@ -49,7 +51,7 @@ def getAllClientCreditCiudad(limiteCredit, ciudad):
                 "Codigo del asesor": val.get('codigo_empleado_rep_ventas'),
                 "Credito": val.get('limite_credito')
             })
-#     return clienteCredic
+    return clienteCredic
 
 
 def menu():
@@ -74,9 +76,9 @@ def menu():
         elif (opcion == 2):
             codigoCliente = int(input("Ingrese el codigo del cliente: "))
             print(tabulate(getOneClientCodigo(codigoCliente),headers="keys", tablefmt="github"))
-        # elif(opcion == 3):
-        #     limite = float(input("Ingrese el limite de credito de los clientes que deseas vizualizar: "))
-        #     ciudad = input("Ingrese el nombre de la ciudad que deseas filtrar los clientes: ")
-        #     print(tabulate(getAllClientCreditCiudad(limite, ciudad), headers="keys", tablefmt="github"))
+        elif(opcion == 3):
+             limiteCredit = float(input("Ingrese el limite de credito de los clientes que deseas vizualizar: "))
+             ciudad = input("Ingrese el nombre de la ciudad que deseas filtrar los clientes: ")
+             print(tabulate(getAllClientCreditCiudad(limiteCredit, ciudad), headers="keys", tablefmt="github"))
         elif (opcion == 0):
             break
