@@ -29,8 +29,9 @@ def getPuestoNameApellidosEmail(Director_General):
                 })
     return getPuestoNameApellidosEmail 
 
-def menu():
-    print("hola mundo")
+# def menu():
+
+print(getPuestoNameApellidosEmail)  
 
 
 
