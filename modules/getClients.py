@@ -1,10 +1,22 @@
 from tabulate import tabulate
-import storage.cliente as cli
+import json
+import request
+# Esto ya no funciona porque lo cambiamos a json ------------- import storage.cliente as cli
 
+#json-server (lugar donde se almacena lo que deseamos) storage/producto.json -b (-b lo usamos para definir un servidor especifico) 5001 (el servidor deseado)
+
+#servidor de clientes
+def getAllDataDeClientes():
+    peticion = requests.get("http://")
+    #debemos poner el puerto del ip y aparte del puerto en el que deseamos
+    data = peticion.json()
+    return data
+    
+#Apartir de aqui ya no está disponible cli.clientes debido a que dejo de funcionar la importacion.
 
 def getAllClientName():
     clienteName = list()
-    for val in cli.clientes:
+    for val in getAllDataDeClientes():
         codigoName = dict({
             "codigo": val.get('codigo_cliente'),
             "nombre": val.get('nombre_cliente')
@@ -14,7 +26,7 @@ def getAllClientName():
 
 
 def getOneClientCodigo(codigo):
-    for val in cli.clientes:
+    for val in getAllDataDeClientes()::
         if (val.get('codigo_cliente') == codigo):
             return [{
                 "codigo": val.get('codigo_cliente'),
@@ -24,7 +36,7 @@ def getOneClientCodigo(codigo):
 
 def getAllClientCreditCiudad(limiteCredit, ciudad):
     clienteCredic = list()
-    for val in cli.clientes:
+    for val in getAllDataDeClientes()::
         if (val.get('limite_credito') >= limiteCredit and val.get('ciudad') == ciudad):
             clienteCredic.append({
                 "Codigo": val.get('codigo_cliente'),
