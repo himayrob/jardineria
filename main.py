@@ -6,8 +6,8 @@ import modules.getEmpleados as em
 import modules.getPedido as pe
 import modules.getProducto as Repproducto
 import modules.postProducto as CRUDproducto
-
-# def menuProducto():
+import json
+def menuProducto():
 #      while True:
 #           os.system("clear")
 #           print("""
@@ -40,6 +40,8 @@ def menu():
 
                   
 """)
+
+                    
       
             opcion = int(input("\nseleccione una de las opciones: "))        
             if(opcion==1):
@@ -53,7 +55,7 @@ def menu():
             # elif(opcion==5):
             #     producto.menu()
             #elif(opcion == 0):
-               #break
+               break
 menu()
               
          #   except zeroDivision as error:
@@ -62,7 +64,18 @@ menu()
          #      print("error generado: ")
               
               
-              
+     
+if(__name__= "__main__"):
+   with open("storage/producto.json". "r") as f:
+      fichero = f.read()
+      data =json.loads(f.read())
+      for i, val in enumerate(data):
+           val["id"] = (i+1)      
+           print(data)
+           whit open("storage/producto.json", "r") as f:
+           f1.write(data)
+           f1.close()
+         
               
 
            
