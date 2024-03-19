@@ -1,6 +1,7 @@
 from tabulate import tabulate
 import json
 import requests
+
 # Esto ya no funciona porque lo cambiamos a json ------------- import storage.cliente as cli
 
 #json-server (lugar donde se almacena lo que deseamos) storage/producto.json -b (-b lo usamos para definir un servidor especifico) 5001 (el servidor deseado)
@@ -32,6 +33,7 @@ def getOneClientCodigo(codigo):
                 "codigo": val.get('codigo_cliente'),
                 "nombre": val.get('nombre_cliente')
             }]
+    return getOneClientCodigo
 
 
 def getAllClientCreditCiudad(limiteCredit, ciudad):
@@ -74,8 +76,8 @@ def menu():
         if (opcion == 1):
             print(tabulate(getAllClientName(), headers="keys", tablefmt="github"))
         elif (opcion == 2):
-            codigoCliente = int(input("Ingrese el codigo del cliente: "))
-            print(tabulate(getOneClientCodigo(codigoCliente),headers="keys", tablefmt="github"))
+            codigo = int(input("Ingrese el codigo del cliente: "))
+            print(tabulate(getOneClientCodigo(codigo),headers="keys", tablefmt="github"))
         elif(opcion == 3):
              limiteCredit = float(input("Ingrese el limite de credito de los clientes que deseas vizualizar: "))
              ciudad = input("Ingrese el nombre de la ciudad que deseas filtrar los clientes: ")
