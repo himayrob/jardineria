@@ -34,3 +34,19 @@ def getAllCiudadTelefono(ciudad):#segundo filtro
                 "pais": val.get("pais")
             })
     return ciudadTelefono
+
+
+
+def menu():
+    while True:
+        print("""
+
+
+
+
+
+
+
+
+
+        """)

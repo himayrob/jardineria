@@ -10,7 +10,7 @@ import modules.getProducto as gP
 
 def getAllData():
     # json-server storage/producto.json -b 5501
-    peticion = requests.get("http://172.16.102.108:5501")
+    peticion = requests.get("http://172.16.103.27:5501")
     data = peticion.json()
     return data
 

@@ -1,5 +1,7 @@
-from tabulate import tabulate
+#from tabulate import tabulate
+import re
 import json
+import modules.postClients as postcli
 import requests
 
 # Esto ya no funciona porque lo cambiamos a json ------------- import storage.cliente as cli

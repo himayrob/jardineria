@@ -33,3 +33,21 @@ def getAllPedidosEntregadosAtrasadosDeTiempo():
 
 # Devuelve un listado de todos los pedidos que han sido entregados 
 # en el mes de enero de cualquier año.
+
+
+
+
+
+def menu():
+    while True:
+        print("""
+
+
+
+
+
+
+
+
+
+        """)

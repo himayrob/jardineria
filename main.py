@@ -9,6 +9,11 @@ import modules.postProducto as CRUDproducto
 import json
 import requests
 
+
+
+
+
+
 def menu():
       print("""
 
@@ -21,20 +26,23 @@ def menu():
          5. Productos
          6. PostProductos
          """)
-menu()
+
 opcion = int(input("\nSeleccione una de las opciones: "))
 if opcion ==1:
-     cli.menu()
+      cli.menu()
 elif opcion == 2:
       of.menu()
 elif opcion ==3:
-     em.menu()
+      em.menu()
 elif opcion ==4:
       pe.menu()
 elif opcion ==5:
       Repproducto.menu()
 elif opcion == 6:
       CRUDproducto.menu()
+
+
+
 
 
 
@@ -107,3 +115,8 @@ elif opcion == 6:
 #            whit open("storage/producto.json", "r") as f:
 #            f1.write(data)
          #   f1.close()
+
+
+"""
+json-server storage/producto.json -b 5001 & json-server storage/pedido.json -b 5002
+"""
