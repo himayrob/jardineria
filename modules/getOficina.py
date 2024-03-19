@@ -13,7 +13,7 @@ def getAllDataDeOficina():
 
 def getAllCodigoCiudad():#filtro 1
     codigoCiudad = []
-    for val in of.oficina:
+    for val in getAllDataDeOficina():
         codigoCiudad.append({
             "código": val.get("codigo_oficina"),
             "ciudad": val.get("ciudad")
@@ -23,10 +23,10 @@ def getAllCodigoCiudad():#filtro 1
 # Devuelve un listado con la ciudad y el teléfono 
 # de las oficinas de España.
 
-def getAllCiudadTelefono(pais):#segundo filtro
+def getAllCiudadTelefono(ciudad):#segundo filtro
     ciudadTelefono = []
-    for val in of.oficina:
-        if(val.get("pais") == pais):
+    for val in getAllCiudadTelefono():
+        if(val.get("ciudad") == ciudad):
             ciudadTelefono.append({
                 "ciudad": val.get("ciudad"),
                 "teléfono": val.get("telefono"),
