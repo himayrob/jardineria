@@ -25,16 +25,19 @@ menu()
 opcion = int(input("\nSeleccione una de las opciones: "))
 if opcion ==1:
      cli.menu()
-#elif opcion == 2:
-      #oficina.menu()
+elif opcion == 2:
+      of.menu()
 elif opcion ==3:
      em.menu()
-#elif opcion ==4:
- #     Pedidos.menu()
-#elif opcion ==5:
- #     producto.menu()
+elif opcion ==4:
+      pe.menu()
+elif opcion ==5:
+      Repproducto.menu()
 elif opcion == 6:
       CRUDproducto.menu()
+
+
+
 
 #   while True:
    #        os.system("clear")
